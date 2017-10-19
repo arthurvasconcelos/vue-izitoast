@@ -1,0 +1,50 @@
+{
+  "name": "vue-izitoast",
+  "version": "0.0.0",
+  "description": "Elegant, responsive, flexible and lightweight notification plugin implemented for Vue 2 of iziToast",
+  "main": "dist/index.js",
+  "typings": "types/index.d.ts",
+  "files": [
+    "dist",
+    "types/index.d.ts",
+    "types/vue.d.ts"
+  ],
+  "scripts": {
+    
+  },
+  "homepage": "https://github.comarthurvasconcelos/vue-izitoast#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.comarthurvasconcelos/vue-izitoast.git"
+  },
+  "bugs": {
+    "url": "https://github.comarthurvasconcelos/vue-izitoast/issues"
+  },
+  "keywords": [
+    "vue",
+    "typescript",
+    "izitoast",
+    "toaster",
+    "toast",
+    "message",
+    "notification",
+    "alert",
+    "info,",
+    "success",
+    "warning",
+    "confirm",
+    "question",
+    "js"
+  ],
+  "author": "Arthur Vasconcelos <vasconcelos.arthur@gmail.com> (http://arthurvasconcelos.com.br/)",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "izitoast": "arthurvasconcelos/izitoast#master",
+    "vue": "^2.5.2"
+  },
+  "peerDependencies": {
+    "izitoast": "^1.1.5",
+    "vue": "^2.5.2"
+  }
+}
