@@ -1,3 +1,9 @@
+/*
+ * vue-izitoast | v1.0.0
+ * http://arthurvasconcelos.com.br
+ * by Arthur Vasconcelos.
+ */
+
 import iziToast from 'izitoast';
 
 export default function plugin (Vue, options = {}) {

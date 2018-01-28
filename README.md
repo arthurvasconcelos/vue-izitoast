@@ -1,3 +1,7 @@
+[![dependencies Status](https://david-dm.org/arthurvasconcelos/vue-izitoast/status.svg?style=flat-square)](https://david-dm.org/arthurvasconcelos/vue-izitoast) 
+[![devDependencies Status](https://david-dm.org/arthurvasconcelos/vue-izitoast/dev-status.svg?style=flat-square)](https://david-dm.org/arthurvasconcelos/vue-izitoast?type=dev) 
+[![peerDependencies Status](https://david-dm.org/arthurvasconcelos/vue-izitoast/peer-status.svg?style=flat-square)](https://david-dm.org/arthurvasconcelos/vue-izitoast?type=peer)
+
 # Vue iziToast
 
 Elegant, responsive, flexible and lightweight notification plugin implemented for Vue 2 of [iziToast](https://github.com/dolce/iziToast)
@@ -32,5 +36,9 @@ Vue.use(VueIziToast, defaultOptionsObject);
 ```
 
 ## Running
+--
 
 ## Contributing
+--
+
+![Live Long and Prosper](http://i.imgur.com/wtGmSKO.png)
