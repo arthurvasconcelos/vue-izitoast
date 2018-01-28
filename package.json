@@ -1,16 +1,14 @@
 {
   "name": "vue-izitoast",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Elegant, responsive, flexible and lightweight notification plugin implemented for Vue 2 of iziToast",
-  "main": "dist/index.js",
-  "typings": "types/index.d.ts",
+  "main": "dist/vue-izitoast.js",
   "files": [
-    "dist",
-    "types/index.d.ts",
-    "types/vue.d.ts"
+    "dist/vue-izitoast.js",
+    "dist/vue-izitoast.min.js"
   ],
   "scripts": {
-    
+    "build": "node build/build.js"
   },
   "homepage": "https://github.comarthurvasconcelos/vue-izitoast#readme",
   "repository": {
@@ -22,7 +20,6 @@
   },
   "keywords": [
     "vue",
-    "typescript",
     "izitoast",
     "toaster",
     "toast",
@@ -36,15 +33,46 @@
     "question",
     "js"
   ],
+  "engines": {
+    "node": "^6.11.4 || ^8.7.0",
+    "npm": "^3.10.10 || ^5.4.2",
+    "yarn": "^1.0.0"
+  },
   "author": "Arthur Vasconcelos <vasconcelos.arthur@gmail.com> (http://arthurvasconcelos.com.br/)",
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "izitoast": "arthurvasconcelos/izitoast#master",
-    "vue": "^2.5.2"
+    "izitoast": "dolce/iziToast#76fe906"
   },
   "peerDependencies": {
-    "izitoast": "^1.1.5",
-    "vue": "^2.5.2"
+    "izitoast": "dolce/iziToast#76fe906",
+    "vue": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "chalk": "^2.3.0",
+    "compression-webpack-plugin": "^1.1.3",
+    "cross-env": "^5.1.3",
+    "cross-spawn": "^6.0.3",
+    "eslint": "^4.16.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "friendly-errors-webpack-plugin": "^1.6.1",
+    "ora": "^1.3.0",
+    "rimraf": "^2.6.2",
+    "semver": "^5.5.0",
+    "shelljs": "^0.8.1",
+    "uglify-es": "^3.3.9",
+    "uglifyjs-webpack-plugin": "^1.1.6",
+    "webpack": "^3.10.0",
+    "webpack-bundle-analyzer": "^2.9.2",
+    "webpack-dev-middleware": "^2.0.4",
+    "webpack-merge": "^4.1.1"
   }
 }

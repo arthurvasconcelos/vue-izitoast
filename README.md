@@ -6,8 +6,8 @@ Elegant, responsive, flexible and lightweight notification plugin implemented fo
 
 ## Requirements
 
-- Vue ^2.0.0
-- iziToast ^1.2.0
+- **Vue:** _^2.0.0_
+- **iziToast:** _lastest_
 
 ## Install
 ```sh
@@ -17,6 +17,19 @@ $ yarn add vue-izitoast
 ```
 
 ## Configuration
+
+```javascript
+import Vue from 'vue';
+import VueIziToast from 'vue-izitoast';
+
+import 'izitoast/dist/css/iziToast.css';
+or
+import 'izitoast/dist/css/iziToast.min.css';
+
+Vue.use(VueIziToast);
+or
+Vue.use(VueIziToast, defaultOptionsObject);
+```
 
 ## Running
 
