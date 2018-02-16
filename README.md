@@ -52,11 +52,98 @@ or
 Vue.use(VueIziToast, defaultOptionsObject);
 ```
 
-## Running
---
+## Usage [![Edit Vue-Izitoast Example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/8l1y3mn8rl)
+
+```javascript
+new Vue({
+    el: '#app',
+    data() {
+        return {
+            notificationSystem: {
+                options: {
+                    show: {
+                        theme: 'dark',
+                        icon: 'icon-person',
+                        position: 'topCenter',
+                        progressBarColor: 'rgb(0, 255, 184)',
+                        buttons: [
+                            ['<button>Ok</button>', function (instance, toast) {
+                                alert("Hello world!");
+                            }, true],
+                            ['<button>Close</button>', function (instance, toast) {
+                                instance.hide({
+                                    transitionOut: 'fadeOutUp',
+                                    onClosing: function(instance, toast, closedBy){
+                                        console.info('closedBy: ' + closedBy);
+                                    }
+                                }, toast, 'buttonName');
+                            }]
+                        ],
+                        onOpening: function(instance, toast){
+                            console.info('callback abriu!');
+                        },
+                        onClosing: function(instance, toast, closedBy){
+                            console.info('closedBy: ' + closedBy);
+                        }
+                    },
+                    ballon: {
+                        balloon: true,
+                        position: 'bottomCenter'
+                    },
+                    info: {
+                        position: 'bottomLeft'
+                    },
+                    success: {
+                        position: 'bottomRight'
+                    },
+                    warning: {
+                        position: 'topLeft'
+                    },
+                    error: {
+                        position: 'topRight'
+                    },
+                    question: {
+                        timeout: 20000,
+                        close: false,
+                        overlay: true,
+                        toastOnce: true,
+                        id: 'question',
+                        zindex: 999,
+                        position: 'center',
+                        buttons: [
+                            ['<button><b>YES</b></button>', function (instance, toast) {
+                                instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
+                            }, true],
+                            ['<button>NO</button>', function (instance, toast) {
+                                instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
+                            }]
+                        ],
+                        onClosing: function(instance, toast, closedBy){
+                            console.info('Closing | closedBy: ' + closedBy);
+                        },
+                        onClosed: function(instance, toast, closedBy){
+                            console.info('Closed | closedBy: ' + closedBy);
+                        }
+                    }
+                }
+            }
+        };
+    },
+    mounted: function() {
+        this.$toast.show('Welcome!', 'Hey', notificationSystem.options.show);
+        this.$toast.show('Welcome!', 'Hey', notificationSystem.options.ballon);
+        this.$toast.info('Welcome!', 'Hello', notificationSystem.options.info);
+        this.$toast.success('Successfully inserted record!', 'OK', notificationSystem.options.success);
+        this.$toast.warning('You forgot important data', 'Caution', notificationSystem.options.warning);
+        this.$toast.error('Illegal operation', 'Error', notificationSystem.options.error);
+        this.$toast.question('Are you sure about that?', 'Hey', notificationSystem.options.question);
+    }
+})
+```
 
 ## Contributing
---
+- Vue-Izitoast Issues: https://github.com/arthurvasconcelos/vue-izitoast/issues
+- IziToast Issues: https://github.com/dolce/iziToast/issues
 
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
