@@ -63,7 +63,7 @@ export default function plugin (Vue, options = {}) {
         },
         _checkEventNames(eventName) {
             if (!eventName || eventName.constructor !== String) throw 'Event Name must be a string';
-            if (eventName !== 'iziToast-open' || eventName !== 'iziToast-close') throw 'Event Name has only two possible values: iziToast-open or iziToast-close';
+            if (eventName !== 'iziToast-open' && eventName !== 'iziToast-close') throw 'Event Name has only two possible values: iziToast-open or iziToast-close';
         },
         methods: {
             show(message, title = '', options = {}) {
