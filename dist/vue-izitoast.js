@@ -84,6 +84,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_izitoast___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_izitoast__);
 
 
+
+
 function plugin(Vue, options = {}) {
     if (options && options.constructor !== Object) throw 'Options must be a object';
 
@@ -137,7 +139,7 @@ function plugin(Vue, options = {}) {
         },
         _checkEventNames(eventName) {
             if (!eventName || eventName.constructor !== String) throw 'Event Name must be a string';
-            if (eventName !== 'iziToast-open' || eventName !== 'iziToast-close') throw 'Event Name has only two possible values: iziToast-open or iziToast-close';
+            if (eventName !== 'iziToast-open' && eventName !== 'iziToast-close') throw 'Event Name has only two possible values: iziToast-open or iziToast-close';
         },
         methods: {
             show(message, title = '', options = {}) {
