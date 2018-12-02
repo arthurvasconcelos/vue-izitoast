@@ -1,5 +1,9 @@
 # Vue-izitoast Changelog
 
+## v1.1.2 (November 01, 2018)
+
+- Update builded files.
+
 ## v1.1.1 (November 01, 2018)
 
 - [#4](https://github.com/arthurvasconcelos/vue-izitoast/pull/4) / [#9](https://github.com/arthurvasconcelos/vue-izitoast/pull/9) [BUGFIX] Support node 9, 10 and npm 6+.
