@@ -18,11 +18,6 @@ Elegant, responsive, flexible and lightweight notification plugin implemented fo
 [![License](https://img.shields.io/github/license/arthurvasconcelos/vue-izitoast.svg?style=flat-square)](https://github.com/arthurvasconcelos/vue-izitoast/blob/master/LICENSE)
 [![Compatible Node Version](https://img.shields.io/node/v/vue-izitoast.svg?style=flat-square)](https://github.com/arthurvasconcelos/vue-izitoast/blob/master/package.json#L36)
 
-[![bitHound Overall Score](https://www.bithound.io/github/arthurvasconcelos/vue-izitoast/badges/score.svg)](https://www.bithound.io/github/arthurvasconcelos/vue-izitoast)
-[![bitHound Dependencies](https://www.bithound.io/github/arthurvasconcelos/vue-izitoast/badges/dependencies.svg)](https://www.bithound.io/github/arthurvasconcelos/vue-izitoast/master/dependencies/npm)
-[![bitHound Dev Dependencies](https://www.bithound.io/github/arthurvasconcelos/vue-izitoast/badges/devDependencies.svg)](https://www.bithound.io/github/arthurvasconcelos/vue-izitoast/master/dependencies/npm)
-[![bitHound Code](https://www.bithound.io/github/arthurvasconcelos/vue-izitoast/badges/code.svg)](https://www.bithound.io/github/arthurvasconcelos/vue-izitoast)
-
 ![cover](http://i.imgur.com/NKk7Rxm.png)
 
 ## Requirements
