@@ -19,7 +19,7 @@ jobs:
     - name: Build
       run: npm run build
     - name: Test
-      run: npm run test
+      run: npm run ci
   Windows:
     runs-on: windows-latest
     strategy:
@@ -36,7 +36,7 @@ jobs:
     - name: Build
       run: npm run build
     - name: Test
-      run: npm run test
+      run: npm run ci
   MacOS:
     runs-on: macOS-latest
     strategy:
@@ -53,4 +53,4 @@ jobs:
     - name: Build
       run: npm run build
     - name: Test
-      run: npm run test
+      run: npm run ci
