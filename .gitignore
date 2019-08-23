@@ -1,3 +1,17 @@
+# Modules
 node_modules
+
+# Logs
+npm-debug.log
+
+# Tests
+cypress/screenshots
+cypress/videos
+
+# Editors / IDEs
 .idea/*
+.vscode
+
+# Others
 *.lock
+*.bak
