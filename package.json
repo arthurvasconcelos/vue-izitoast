@@ -9,15 +9,16 @@
     "src"
   ],
   "scripts": {
-    "test": "run-p cypress:run example",
-    "test:dev": "run-p cypress:open example",
+    "deploy": "run-s build storybook:build",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "server": "poi -s examples/index.js",
+    "test": "run-p cypress:run server",
+    "test:dev": "run-p cypress:open server",
     "cypress:run": "cypress run",
     "cypress:open": "cypress open",
+    "ci": "start-server-and-test server 4000 cypress:run",
     "storybook": "start-storybook",
-    "storybook:build": "build-storybook -o docs",
-    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
-    "example": "poi -s examples/index.js",
-    "deploy": "run-s build storybook:build"
+    "storybook:build": "build-storybook -o docs"
   },
   "homepage": "https://github.com/arthurvasconcelos/vue-izitoast#readme",
   "repository": {
@@ -87,6 +88,7 @@
     "rimraf": "^3.0.0",
     "semver": "^6.3.0",
     "shelljs": "^0.8.3",
+    "start-server-and-test": "^1.10.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "vue": "^2.6.10",
     "vue-html-loader": "^1.2.4",
