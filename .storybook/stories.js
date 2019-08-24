@@ -12,7 +12,7 @@ const withSettings = component => ({
   ...component
 });
 
-const stories = storiesOf('VuePlugin', module);
+const stories = storiesOf('Vue IziToast', module);
 
 stories
   .add(
