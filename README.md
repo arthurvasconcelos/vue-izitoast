@@ -60,7 +60,7 @@ Vue.use(VueIziToast, defaultOptionsObject);
 
 ## Usage
 
-See examples in our [<img src="resources/storybook-logo.png" width="30">](https://arthurvasconcelos.com.br/vue-izitoast)
+See examples in our [<img src="resources/storybook-logo.png" alt="Storybook" width="30">](https://arthurvasconcelos.com.br/vue-izitoast)
 
 or Try on [![Edit Vue-Izitoast Example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/8l1y3mn8rl)
 
