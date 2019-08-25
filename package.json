@@ -18,7 +18,9 @@
     "cypress:open": "cypress open",
     "ci": "start-server-and-test server 4000 cypress:run",
     "storybook": "start-storybook",
-    "storybook:build": "build-storybook -o docs"
+    "storybook:build": "build-storybook -o docs",
+    "contributors": "node ./scripts/update-contributors.js",
+    "release": "run-s ci deploy contributors publish"
   },
   "homepage": "https://github.com/arthurvasconcelos/vue-izitoast#readme",
   "repository": {
@@ -79,6 +81,7 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
+    "github-contributors-list": "^1.2.3",
     "husky": "^3.0.4",
     "lint-staged": "^9.2.3",
     "npm-run-all": "^4.1.5",

@@ -29,6 +29,7 @@ Elegant, responsive, flexible and lightweight notification plugin implemented fo
   - [Configuration](#configuration)
   - [Usage](#usage)
   - [Contributing](#contributing)
+  - [Contributors](#contributors)
 
 ## Requirements
 
@@ -68,6 +69,14 @@ or Try on [![Edit Vue-Izitoast Example](https://codesandbox.io/static/img/play-c
 
 - Vue-Izitoast Issues: https://github.com/arthurvasconcelos/vue-izitoast/issues
 - IziToast Issues: https://github.com/dolce/iziToast/issues
+
+## Contributors
+
+<!-- Contributors start -->
+[<img alt="arthurvasconcelos" src="https://avatars3.githubusercontent.com/u/1286768?v=4&s=117" width="117">](https://github.com/arthurvasconcelos) |[<img alt="lgguzman" src="https://avatars3.githubusercontent.com/u/7071825?v=4&s=117" width="117">](https://github.com/lgguzman) |[<img alt="webmcheck" src="https://avatars2.githubusercontent.com/u/1275723?v=4&s=117" width="117">](https://github.com/webmcheck) |
+:---: |:---: |:---: |
+[arthurvasconcelos](https://github.com/arthurvasconcelos) |[lgguzman](https://github.com/lgguzman) |[webmcheck](https://github.com/webmcheck) |
+<!-- Contributors end -->
 
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 

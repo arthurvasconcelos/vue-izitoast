@@ -16,7 +16,7 @@ context('Vue Izitoast.', () => {
     cy.get('.iziToast')
       .should('have.css', 'display', 'inline-block')
       .should('contain.text', 'this is a custom toast message')
-      .wait(2500)
+      .wait(3000)
       .should('not.exist')  
   })
 
