@@ -3,35 +3,35 @@ name: Main Workflow
 on: [push, pull_request]
 
 jobs:
-  test:
-    strategy:
-      matrix:
-        platform: [ubuntu-latest, macos-latest, windows-latest]
-        node-version: [10.x, 12.x]
-    runs-on: ${{ matrix.platform }}
-    steps:
-    - uses: actions/checkout@master
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@master
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: Install Dependencies
-      run: npm install
-    - name: Test
-      run: npm run ci
-  build:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    - name: Use Node.js 12.x
-      uses: actions/setup-node@master
-      with:
-        node-version: 12.x
-    - name: Install Dependencies
-      run: npm install
-    - name: Build
-      run: npm run build
+  # test:
+  #   strategy:
+  #     matrix:
+  #       platform: [ubuntu-latest, macos-latest, windows-latest]
+  #       node-version: [10.x, 12.x]
+  #   runs-on: ${{ matrix.platform }}
+  #   steps:
+  #   - uses: actions/checkout@master
+  #   - name: Use Node.js ${{ matrix.node-version }}
+  #     uses: actions/setup-node@master
+  #     with:
+  #       node-version: ${{ matrix.node-version }}
+  #   - name: Install Dependencies
+  #     run: npm install
+  #   - name: Test
+  #     run: npm run ci
+  # build:
+  #   needs: test
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - uses: actions/checkout@master
+  #   - name: Use Node.js 12.x
+  #     uses: actions/setup-node@master
+  #     with:
+  #       node-version: 12.x
+  #   - name: Install Dependencies
+  #     run: npm install
+  #   - name: Build
+  #     run: npm run build
   deploy-ghpages:
     needs: build
     runs-on: ubuntu-latest
