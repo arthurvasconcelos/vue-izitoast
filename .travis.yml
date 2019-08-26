@@ -11,18 +11,14 @@ matrix:
         - node
       addons:
       apt:
-        sources:
-          - ubuntu-toolchain-r-test
         packages:
-          - gcc-multilib
-          - g++-8
-          - g++-multilib
-          - icnsutils
-          - graphicsmagick
-          - xz-utils
-          - xorriso
-          - rpm
-          - libgconf
+          - xvfb
+          - libgtk-3-dev
+          - libnotify-dev
+          - libgconf-2-4
+          - libnss3
+          - libxss1
+          - libasound2
 
     - os: windows
       language: node_js
