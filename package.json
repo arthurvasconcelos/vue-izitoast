@@ -18,7 +18,7 @@
     "cypress:open": "cypress open",
     "ci": "start-server-and-test server 4000 cypress:run",
     "storybook": "start-storybook",
-    "storybook:build": "build-storybook -o docs",
+    "storybook:build": "build-storybook -o storybook-public",
     "contributors": "node ./scripts/update-contributors.js",
     "release": "run-s ci deploy contributors publish"
   },
