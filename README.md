@@ -2,7 +2,7 @@
 
 Elegant, responsive, flexible and lightweight notification plugin implemented for Vue 2 of [iziToast](https://github.com/dolce/iziToast)
 
-[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Farthurvasconcelos%2Fvue-izitoast%2Fbadge&style=flat-square)](https://actions-badge.atrox.dev/arthurvasconcelos/vue-izitoast/goto)
+[![Build Status](https://travis-ci.org/arthurvasconcelos/vue-izitoast.svg?branch=master&style=flat-square)](https://travis-ci.org/arthurvasconcelos/vue-izitoast)
 
 [![dependencies Status](https://david-dm.org/arthurvasconcelos/vue-izitoast/status.svg?style=flat-square)](https://david-dm.org/arthurvasconcelos/vue-izitoast)
 [![devDependencies Status](https://david-dm.org/arthurvasconcelos/vue-izitoast/dev-status.svg?style=flat-square)](https://david-dm.org/arthurvasconcelos/vue-izitoast?type=dev)
