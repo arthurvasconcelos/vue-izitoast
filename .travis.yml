@@ -3,35 +3,29 @@ matrix:
     - os: osx
       language: node_js
       node_js:
-        - node
+        - 12
 
     - os: linux
       language: node_js
       node_js:
-        - node
+        - 12
       addons:
-      apt:
-        packages:
-          - xvfb
-          - libgtk-3-dev
-          - libnotify-dev
-          - libgconf-2-4
-          - libnss3
-          - libxss1
-          - libasound2
+        apt:
+          packages:
+            - libgconf-2-4
 
     - os: windows
       language: node_js
       node_js:
-        - node
+        - 12
 
 cache:
+  npm: true
   directories:
-    - node_modules
+    - ~/.cache
 
 install:
-  - npm install
-  - npx cypress install
+  - npm ci
 
 script:
   - npm run ci
