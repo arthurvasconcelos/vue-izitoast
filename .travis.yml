@@ -1,0 +1,32 @@
+matrix:
+  include:
+    - os: osx
+      language: node_js
+      node_js:
+        - node
+
+    - os: linux
+      language: node_js
+      node_js:
+        - node
+
+    - os: windows
+      language: node_js
+      node_js:
+        - node
+
+cache:
+  directories:
+    - node_modules
+
+install:
+  - npm install
+
+script:
+  - npm run ci
+  - npm run build
+
+notifications:
+  email:
+    on_success: never
+    on_failure: change
