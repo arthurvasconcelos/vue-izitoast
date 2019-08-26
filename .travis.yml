@@ -22,18 +22,20 @@ matrix:
           - xz-utils
           - xorriso
           - rpm
+          - libgconf
 
     - os: windows
       language: node_js
       node_js:
         - node
 
-# cache:
-#   directories:
-#     - node_modules
+cache:
+  directories:
+    - node_modules
 
 install:
   - npm install
+  - npx cypress install
 
 script:
   - npm run ci
