@@ -33,7 +33,7 @@ jobs:
   #   - name: Build
   #     run: npm run build
   deploy-ghpages:
-    needs: build
+    # needs: build
     runs-on: ubuntu-latest
     steps:
     - name: GitHub Pages Deploy
