@@ -1,14 +1,6 @@
 name: Main
 
-on: 
-  push:
-    branches:
-    - master
-    - '!refs/pull/*'
-    - '!refs/tag/*'
-  pull_request:
-    branches:
-      - master
+on: [push, pull_request]
 
 jobs:
   test:
@@ -40,3 +32,26 @@ jobs:
       run: npm install
     - name: Build
       run: npm run build
+  deploy-ghpages:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/bin/filter@master
+      with:
+        args: tag
+    - uses: actions/checkout@master
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@master
+      with:
+        node-version: 12.x
+    - name: Install Dependencies
+      run: npm install
+    - name: Build Storybook
+      run: npm run storybook:build
+    - name: GitHub Pages Deploy
+      uses: JamesIves/github-pages-deploy-action@master
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: storybook-public
+        COMMIT_EMAIL: vasconcelos.arthur@gmail.com
+        COMMIT_NAME: Arthur Vasconcelos
