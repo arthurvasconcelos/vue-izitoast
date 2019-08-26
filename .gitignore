@@ -1,6 +1,10 @@
 # Modules
 node_modules
 
+# Compiled files
+dist
+docs
+
 # Logs
 npm-debug.log
 
