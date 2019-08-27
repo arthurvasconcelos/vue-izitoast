@@ -2,6 +2,11 @@ matrix:
   allow_failures:
     - os: windows
   include:
+    - os: windows
+      language: node_js
+      node_js:
+        - 12
+
     - os: osx
       language: node_js
       node_js:
@@ -16,22 +21,36 @@ matrix:
           packages:
             - libgconf-2-4
 
-    - os: windows
-      language: node_js
-      node_js:
-        - 12
-
 cache:
   npm: true
   directories:
     - ~/.cache
 
+stages:
+  - tests
+  - build
+
 install:
   - npm ci
 
-script:
-  - npm run ci
-  - npm run build
+jobs:
+  include:
+    - stage: Tests
+      name: E2E Test
+      script:
+        - npm run ci
+
+    - stage: Build
+      name: Build
+      script:
+        - npm run build
+
+deploy:
+  provider: pages
+  local_dir: './storybook-public'
+  github_token: $GITHUB_TOKEN
+  on:
+    condition: os = linux AND tag IS present
 
 notifications:
   email:
