@@ -39,12 +39,12 @@ jobs:
     - stage: deploy
       name: Deploy
       script: skip
+      before_deploy:
+        - npm run storybook:build
       deploy:
         - provider: pages
           local_dir: './storybook-public'
           github_token: $GITHUB_TOKEN
-          on:
-            - tags: true
 
 notifications:
   email:
