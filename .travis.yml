@@ -39,7 +39,7 @@ deploy:
   local_dir: './storybook-public'
   github_token: $GITHUB_TOKEN
   on:
-    condition: os = linux AND tag IS present
+    tags: true
 
 notifications:
   email:
