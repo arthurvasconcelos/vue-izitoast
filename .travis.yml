@@ -18,6 +18,7 @@ cache:
 stages:
   - tests
   - build
+  - deploy
 
 install:
   - npm ci
