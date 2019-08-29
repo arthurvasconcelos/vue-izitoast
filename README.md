@@ -68,7 +68,7 @@ or Try on [![Edit Vue-Izitoast Example](https://codesandbox.io/static/img/play-c
 
 ## Testing
 
-Vue Izitoast is using Github Actions as CD/CI. As it still in beta, it may not appear to everyone but you still can inspect the last run clicking in this badge [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Farthurvasconcelos%2Fvue-izitoast%2Fbadge&style=flat-square)](https://actions-badge.atrox.dev/arthurvasconcelos/vue-izitoast/goto) and/or inspect the workflow files [here](https://github.com/arthurvasconcelos/vue-izitoast/tree/master/.github/workflows).
+Vue Izitoast is using Travis as CD/CI. You can check the state of our last build here [![Build Status](https://travis-ci.org/arthurvasconcelos/vue-izitoast.svg?branch=master&style=flat-square)](https://travis-ci.org/arthurvasconcelos/vue-izitoast).
 
 ## Contributing
 
