@@ -18,7 +18,8 @@ cache:
 stages:
   - tests
   - build
-  - deploy
+  - name: deploy
+    if: tag IS present
 
 install:
   - npm ci
