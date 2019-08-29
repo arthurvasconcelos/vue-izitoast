@@ -1,5 +1,13 @@
 # Vue-izitoast Changelog
 
+## NEXT ()
+
+- [#23](https://github.com/arthurvasconcelos/vue-izitoast/issues/23) [BUGFIX] Fixed undefined toast in Vue prototype.
+
+### Breaking Changes
+
+- Now Vue-izitoast is accessed through `Vue.toast` or `this.$toast`.
+
 ## v1.2.0 (August 23, 2019)
 
 - [#16](https://github.com/arthurvasconcelos/vue-izitoast/issue/16) / [#17](https://github.com/arthurvasconcelos/vue-izitoast/issue/17) / [#20](https://github.com/arthurvasconcelos/vue-izitoast/pull/20) / [#22](https://github.com/arthurvasconcelos/vue-izitoast/pull/20) [BUGFIX] Removed Node Engine from package.json
