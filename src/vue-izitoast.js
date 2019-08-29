@@ -61,7 +61,7 @@ export default class VueIziToast {
     _izi = iziToast;
 
     // Public Variables
-    accessorName = '$toast';
+    accessorName = 'toast';
     initialized = false;
 
     constructor(options = {}) {
@@ -188,6 +188,15 @@ export function install(Vue, options = {}) {
         return;
     }
 
+    const newInstance = new VueIziToast(options);
+
+    /**
+     * VueIziToast set 'toast' at Vue protoype object.
+     */
+    Object.defineProperty(Vue.prototype, newInstance.accessorName, {
+        get() { return newInstance; }
+    });
+
     Vue.mixin({
         /**
          * VueIziToast init hook, injected into each instances init hooks list.
@@ -200,13 +209,13 @@ export function install(Vue, options = {}) {
                 instance = parent.__$VueIziToastInstance;
                 instance.init(Vue);
             } else {
-                instance = new VueIziToast(options);
+                instance = newInstance;
             }
 
             if (instance) {
                 // Store helper for internal use
                 this.__$VueIziToastInstance = instance;
-                this[instance.accessorName] = instance;
+                this[`$${instance.accessorName}`] = instance;
             }
         }
     });
