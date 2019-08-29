@@ -12,15 +12,19 @@ export function devMode() {
 
 export default class VueIziToast {
     // Static Methods
-    static _checkParams(message, title, options) {
+    static _checkParams(message, title, options, methodName = null) {
+        const methodSignature = (!methodName) ? '' : ` Method signature: ${methodName}(message: string, title: string, options: IzitoastOptions)`;
+
         if (!message || message.constructor !== String) {
-            throw 'Message must be a string';
+            throw `Message must be a string.${methodSignature}`;
         }
+
         if (title && title.constructor !== String) {
-            throw 'Title must be a string';
+            throw `Title must be a string.${methodSignature}`;
         }
+
         if (options && options.constructor !== Object) {
-            throw 'Options must be a object';
+            throw `Options must be a object.${methodSignature}`;
         }
     }
 
@@ -114,7 +118,7 @@ export default class VueIziToast {
     }
 
     show(message, title = '', options = {}) {
-        VueIziToast._checkParams(message, title, options);
+        VueIziToast._checkParams(message, title, options, 'show');
         this._izi.show(Object.assign({}, options, { message, title }));
     }
 
@@ -136,27 +140,27 @@ export default class VueIziToast {
     }
 
     info(message, title = '', options = {}) {
-        VueIziToast._checkParams(message, title, options);
+        VueIziToast._checkParams(message, title, options, 'info');
         this._izi.info(Object.assign({}, options, { message, title }));
     }
 
     success(message, title = '', options = {}) {
-        VueIziToast._checkParams(message, title, options);
+        VueIziToast._checkParams(message, title, options, 'success');
         this._izi.success(Object.assign({}, options, { message, title }));
     }
 
     warning(message, title = '', options = {}) {
-        VueIziToast._checkParams(message, title, options);
+        VueIziToast._checkParams(message, title, options, 'warning');
         this._izi.warning(Object.assign({}, options, { message, title }));
     }
 
     error(message, title = '', options = {}) {
-        VueIziToast._checkParams(message, title, options);
+        VueIziToast._checkParams(message, title, options, 'error');
         this._izi.error(Object.assign({}, options, { message, title }));
     }
 
     question(message, title = '', options = {}) {
-        VueIziToast._checkParams(message, title, options);
+        VueIziToast._checkParams(message, title, options, 'question');
         this._izi.question(Object.assign({}, options, { message, title }));
     }
 
