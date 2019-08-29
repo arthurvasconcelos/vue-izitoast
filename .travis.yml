@@ -34,12 +34,13 @@ jobs:
       script:
         - npm run build
 
-deploy:
-  provider: pages
-  local_dir: './storybook-public'
-  github_token: $GITHUB_TOKEN
-  on:
-    tags: true
+    - stage: Deploy
+      deploy:
+        provider: pages
+        local_dir: './storybook-public'
+        github_token: $GITHUB_TOKEN
+        on:
+          tags: true
 
 notifications:
   email:
