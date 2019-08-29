@@ -43,7 +43,7 @@ jobs:
         - npm run storybook:build
       deploy:
         - provider: pages
-          local_dir: './storybook-public'
+          local_dir: 'storybook-public'
           github_token: $GITHUB_TOKEN
           on:
             all_branches: true
