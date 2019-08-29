@@ -3,6 +3,8 @@
 Elegant, responsive, flexible and lightweight notification plugin implemented for Vue 2 of [iziToast](https://github.com/dolce/iziToast)
 
 [![Build Status](https://travis-ci.org/arthurvasconcelos/vue-izitoast.svg?branch=master&style=flat-square)](https://travis-ci.org/arthurvasconcelos/vue-izitoast)
+[![Maintainability](https://api.codeclimate.com/v1/badges/d35ed72474bfd7efd5d6/maintainability)](https://codeclimate.com/github/arthurvasconcelos/vue-izitoast/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/d35ed72474bfd7efd5d6/test_coverage)](https://codeclimate.com/github/arthurvasconcelos/vue-izitoast/test_coverage)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/71078c6d8c5743ad90e99e4f81ec154f)](https://www.codacy.com/app/arthurvasconcelos/vue-izitoast?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=arthurvasconcelos/vue-izitoast&amp;utm_campaign=Badge_Grade)
 [![Greenkeeper badge](https://badges.greenkeeper.io/arthurvasconcelos/vue-izitoast.svg)](https://greenkeeper.io/)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Farthurvasconcelos%2Fvue-izitoast.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Farthurvasconcelos%2Fvue-izitoast?ref=badge_shield)
