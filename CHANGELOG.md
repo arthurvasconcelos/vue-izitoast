@@ -1,6 +1,6 @@
 # Vue-izitoast Changelog
 
-## NEXT ()
+## v1.2.1 (August 29, 2019)
 
 - [#23](https://github.com/arthurvasconcelos/vue-izitoast/issues/23) [BUGFIX] Fixed undefined toast in Vue prototype.
 - [#6](https://github.com/arthurvasconcelos/vue-izitoast/issues/6) [IMPROVEMENT] Improved error message of `_checkParams` to show correct method signature.

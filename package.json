@@ -1,6 +1,6 @@
 {
   "name": "vue-izitoast",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Elegant, responsive, flexible and lightweight notification plugin implemented for Vue 2 of iziToast",
   "main": "dist/vue-izitoast.js",
   "types": "src/types/index.d.ts",
