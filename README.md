@@ -3,6 +3,7 @@
 Elegant, responsive, flexible and lightweight notification plugin implemented for Vue 2 of [iziToast](https://github.com/dolce/iziToast)
 
 [![Build Status](https://travis-ci.org/arthurvasconcelos/vue-izitoast.svg?branch=master&style=flat-square)](https://travis-ci.org/arthurvasconcelos/vue-izitoast)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/71078c6d8c5743ad90e99e4f81ec154f)](https://www.codacy.com/app/arthurvasconcelos/vue-izitoast?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=arthurvasconcelos/vue-izitoast&amp;utm_campaign=Badge_Grade)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Farthurvasconcelos%2Fvue-izitoast.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Farthurvasconcelos%2Fvue-izitoast?ref=badge_shield)
 
 [![dependencies Status](https://david-dm.org/arthurvasconcelos/vue-izitoast/status.svg?style=flat-square)](https://david-dm.org/arthurvasconcelos/vue-izitoast)
@@ -30,6 +31,7 @@ Elegant, responsive, flexible and lightweight notification plugin implemented fo
   - [Configuration](#configuration)
   - [Usage](#usage)
   - [Testing](#testing)
+  - [License](#license)
   - [Contributing](#contributing)
   - [Contributors](#contributors)
 
@@ -71,6 +73,10 @@ or Try on [![Edit Vue-Izitoast Example](https://codesandbox.io/static/img/play-c
 
 Vue Izitoast is using Travis as CD/CI. You can check the state of our last build here [![Build Status](https://travis-ci.org/arthurvasconcelos/vue-izitoast.svg?branch=master&style=flat-square)](https://travis-ci.org/arthurvasconcelos/vue-izitoast).
 
+## License
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Farthurvasconcelos%2Fvue-izitoast.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Farthurvasconcelos%2Fvue-izitoast?ref=badge_large)
+
 ## Contributing
 
 - Vue-Izitoast Issues: https://github.com/arthurvasconcelos/vue-izitoast/issues
@@ -87,7 +93,3 @@ Vue Izitoast is using Travis as CD/CI. You can check the state of our last build
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
 ![Live Long and Prosper](http://i.imgur.com/wtGmSKO.png)
-
-
-## License
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Farthurvasconcelos%2Fvue-izitoast.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Farthurvasconcelos%2Fvue-izitoast?ref=badge_large)
