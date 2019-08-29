@@ -45,6 +45,8 @@ jobs:
         - provider: pages
           local_dir: './storybook-public'
           github_token: $GITHUB_TOKEN
+          on:
+            tag: true
 
 notifications:
   email:
