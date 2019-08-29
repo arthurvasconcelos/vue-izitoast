@@ -18,7 +18,9 @@ cache:
 stages:
   - tests
   - build
-  - name: deploy
+  - name: deploy-gp-pages
+    if: tag IS present
+  - name: deploy-npm-package
     if: tag IS present
 
 install:
@@ -36,8 +38,8 @@ jobs:
       script:
         - npm run build
 
-    - stage: deploy
-      name: Deploy
+    - stage: deploy-gp-pages
+      name: Deploy Storybook to GH Pages
       script: skip
       before_deploy:
         - npm run storybook:build
@@ -46,6 +48,20 @@ jobs:
           skip_cleanup: true
           local_dir: './storybook-public'
           github_token: $GITHUB_TOKEN
+          on:
+            all_branches: true
+            tag: true
+
+    - stage: deploy-npm-package
+      name: Deploy to NPM
+      script: skip
+      before_deploy:
+        - npm run build
+      deploy:
+        - provider: npm
+          skip_cleanup: true
+          email: $NPM_AUTH_EMAIL
+          api_key: $NPM_AUTH_TOKEN
           on:
             all_branches: true
             tag: true
