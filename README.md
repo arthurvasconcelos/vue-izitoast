@@ -90,6 +90,6 @@ Vue Izitoast is using Travis as CD/CI. You can check the state of our last build
 [arthurvasconcelos](https://github.com/arthurvasconcelos) |[lgguzman](https://github.com/lgguzman) |[webmcheck](https://github.com/webmcheck) |
 <!-- Contributors end -->
 
-[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com) [![Greenkeeper badge](https://badges.greenkeeper.io/arthurvasconcelos/vue-izitoast.svg)](https://greenkeeper.io/)
 
 ![Live Long and Prosper](http://i.imgur.com/wtGmSKO.png)
