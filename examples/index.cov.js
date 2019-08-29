@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import VueIziToast from '../src/vue-izitoast';
+import VueIziToast from '../instrumented/vue-izitoast';
 import App from './App.vue';
 import 'izitoast/dist/css/iziToast.css';
 
