@@ -25,23 +25,25 @@ install:
 
 jobs:
   include:
-    - stage: Tests
+    - stage: tests
       name: E2E Test
       script:
         - npm run ci
 
-    - stage: Build
+    - stage: build
       name: Build
       script:
         - npm run build
 
-    - stage: Deploy
+    - stage: deploy
+      name: Deploy
+      script: skip
       deploy:
-        provider: pages
-        local_dir: './storybook-public'
-        github_token: $GITHUB_TOKEN
-        on:
-          tags: true
+        - provider: pages
+          local_dir: './storybook-public'
+          github_token: $GITHUB_TOKEN
+          on:
+            - tags: true
 
 notifications:
   email:
