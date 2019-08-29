@@ -4,6 +4,7 @@ Elegant, responsive, flexible and lightweight notification plugin implemented fo
 
 [![Build Status](https://travis-ci.org/arthurvasconcelos/vue-izitoast.svg?branch=master&style=flat-square)](https://travis-ci.org/arthurvasconcelos/vue-izitoast)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/71078c6d8c5743ad90e99e4f81ec154f)](https://www.codacy.com/app/arthurvasconcelos/vue-izitoast?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=arthurvasconcelos/vue-izitoast&amp;utm_campaign=Badge_Grade)
+[![Greenkeeper badge](https://badges.greenkeeper.io/arthurvasconcelos/vue-izitoast.svg)](https://greenkeeper.io/)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Farthurvasconcelos%2Fvue-izitoast.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Farthurvasconcelos%2Fvue-izitoast?ref=badge_shield)
 
 [![dependencies Status](https://david-dm.org/arthurvasconcelos/vue-izitoast/status.svg?style=flat-square)](https://david-dm.org/arthurvasconcelos/vue-izitoast)
@@ -90,6 +91,6 @@ Vue Izitoast is using Travis as CD/CI. You can check the state of our last build
 [arthurvasconcelos](https://github.com/arthurvasconcelos) |[lgguzman](https://github.com/lgguzman) |[webmcheck](https://github.com/webmcheck) |
 <!-- Contributors end -->
 
-[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com) [![Greenkeeper badge](https://badges.greenkeeper.io/arthurvasconcelos/vue-izitoast.svg)](https://greenkeeper.io/)
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
 ![Live Long and Prosper](http://i.imgur.com/wtGmSKO.png)
