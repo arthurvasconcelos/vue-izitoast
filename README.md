@@ -86,9 +86,9 @@ Vue Izitoast is using Travis as CD/CI. You can check the state of our last build
 ## Contributors
 
 <!-- Contributors start -->
-[<img alt="arthurvasconcelos" src="https://avatars3.githubusercontent.com/u/1286768?v=4&s=117" width="117">](https://github.com/arthurvasconcelos) |[<img alt="lgguzman" src="https://avatars3.githubusercontent.com/u/7071825?v=4&s=117" width="117">](https://github.com/lgguzman) |[<img alt="webmcheck" src="https://avatars2.githubusercontent.com/u/1275723?v=4&s=117" width="117">](https://github.com/webmcheck) |
-:---: |:---: |:---: |
-[arthurvasconcelos](https://github.com/arthurvasconcelos) |[lgguzman](https://github.com/lgguzman) |[webmcheck](https://github.com/webmcheck) |
+[<img alt="arthurvasconcelos" src="https://avatars3.githubusercontent.com/u/1286768?v=4&s=117" width="117">](https://github.com/arthurvasconcelos) |[<img alt="greenkeeper[bot]" src="https://avatars3.githubusercontent.com/in/505?v=4&s=117" width="117">](https://github.com/apps/greenkeeper) |[<img alt="lgguzman" src="https://avatars3.githubusercontent.com/u/7071825?v=4&s=117" width="117">](https://github.com/lgguzman) |[<img alt="fossabot" src="https://avatars0.githubusercontent.com/u/29791463?v=4&s=117" width="117">](https://github.com/fossabot) |[<img alt="webmcheck" src="https://avatars2.githubusercontent.com/u/1275723?v=4&s=117" width="117">](https://github.com/webmcheck) |
+:---: |:---: |:---: |:---: |:---: |
+[arthurvasconcelos](https://github.com/arthurvasconcelos) |[greenkeeper[bot]](https://github.com/apps/greenkeeper) |[lgguzman](https://github.com/lgguzman) |[fossabot](https://github.com/fossabot) |[webmcheck](https://github.com/webmcheck) |
 <!-- Contributors end -->
 
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)

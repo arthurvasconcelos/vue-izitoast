@@ -34,9 +34,10 @@ jobs:
         - npm run ci
 
     - stage: build
-      name: Build
+      name: Build package and storybook
       script:
         - npm run build
+        - npm run storybook:build
 
     - stage: deploy-gp-pages
       name: Deploy Storybook to GH Pages
