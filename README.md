@@ -76,6 +76,8 @@ or Try on [![Edit Vue-Izitoast Example](https://codesandbox.io/static/img/play-c
 
 Vue Izitoast is using Travis as CD/CI. You can check the state of our last build here [![Build Status](https://travis-ci.org/arthurvasconcelos/vue-izitoast.svg?branch=master&style=flat-square)](https://travis-ci.org/arthurvasconcelos/vue-izitoast).
 
+We now are also pledging with [<img src="resources/Browserstack-logo@2x.png" alt="BroserStack" width="100">](https://www.browserstack.com) so we can test on multiple browser and garantee that you will have a great usage cross-browser and os.
+
 ## License
 
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Farthurvasconcelos%2Fvue-izitoast.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Farthurvasconcelos%2Fvue-izitoast?ref=badge_large)
