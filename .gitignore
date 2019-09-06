@@ -1,3 +1,25 @@
+# Modules
 node_modules
+
+# Compiled files
+dist
+instrumented
+docs
+storybook-public
+
+# Logs
+npm-debug.log
+
+# Tests
+cypress/screenshots
+cypress/videos
+.nyc_output
+coverage
+
+# Editors / IDEs
 .idea/*
+.vscode
+
+# Others
 *.lock
+*.bak

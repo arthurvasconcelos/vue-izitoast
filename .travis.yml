@@ -1,0 +1,84 @@
+os: linux
+
+language: node_js
+
+node_js:
+  - 12
+
+addons:
+  apt:
+    packages:
+      - libgconf-2-4
+
+env:
+  global:
+    CC_TEST_REPORTER_ID=$CODE_CLIMATE_ID
+
+cache:
+  npm: true
+  directories:
+    - ~/.cache
+
+stages:
+  - tests
+  - build
+  - name: deploy-gp-pages
+    if: tag IS present
+  - name: deploy-npm-package
+    if: tag IS present
+
+install:
+  - npm ci
+
+jobs:
+  include:
+    - stage: tests
+      name: E2E Test
+      before_script:
+        - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+        - chmod +x ./cc-test-reporter
+        - ./cc-test-reporter before-build
+      script:
+        - npm run instrument
+        - npm run ci
+      after_script:
+        - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+
+    - stage: build
+      name: Build package and storybook
+      script:
+        - npm run build
+        - npm run storybook:build
+
+    - stage: deploy-gp-pages
+      name: Deploy Storybook to GH Pages
+      script: skip
+      before_deploy:
+        - npm run storybook:build
+      deploy:
+        - provider: pages
+          skip_cleanup: true
+          local_dir: './storybook-public'
+          github_token: $GITHUB_TOKEN
+          on:
+            all_branches: true
+            tag: true
+
+    - stage: deploy-npm-package
+      name: Deploy to NPM
+      script: skip
+      before_deploy:
+        - npm run build
+      deploy:
+        - provider: npm
+          skip_cleanup: true
+          email: $NPM_AUTH_EMAIL
+          api_key: $NPM_AUTH_TOKEN
+          on:
+            all_branches: true
+            tag: true
+
+notifications:
+  email:
+    on_success: never
+    on_failure: change

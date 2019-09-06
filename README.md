@@ -2,12 +2,18 @@
 
 Elegant, responsive, flexible and lightweight notification plugin implemented for Vue 2 of [iziToast](https://github.com/dolce/iziToast)
 
-[![dependencies Status](https://david-dm.org/arthurvasconcelos/vue-izitoast/status.svg?style=flat-square)](https://david-dm.org/arthurvasconcelos/vue-izitoast) 
-[![devDependencies Status](https://david-dm.org/arthurvasconcelos/vue-izitoast/dev-status.svg?style=flat-square)](https://david-dm.org/arthurvasconcelos/vue-izitoast?type=dev) 
+[![Build Status](https://travis-ci.org/arthurvasconcelos/vue-izitoast.svg?branch=master&style=flat-square)](https://travis-ci.org/arthurvasconcelos/vue-izitoast)
+[![Maintainability](https://api.codeclimate.com/v1/badges/d35ed72474bfd7efd5d6/maintainability)](https://codeclimate.com/github/arthurvasconcelos/vue-izitoast/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/d35ed72474bfd7efd5d6/test_coverage)](https://codeclimate.com/github/arthurvasconcelos/vue-izitoast/test_coverage)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/71078c6d8c5743ad90e99e4f81ec154f)](https://www.codacy.com/app/arthurvasconcelos/vue-izitoast?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=arthurvasconcelos/vue-izitoast&amp;utm_campaign=Badge_Grade)
+[![Greenkeeper badge](https://badges.greenkeeper.io/arthurvasconcelos/vue-izitoast.svg)](https://greenkeeper.io/)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Farthurvasconcelos%2Fvue-izitoast.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Farthurvasconcelos%2Fvue-izitoast?ref=badge_shield)
+
+[![dependencies Status](https://david-dm.org/arthurvasconcelos/vue-izitoast/status.svg?style=flat-square)](https://david-dm.org/arthurvasconcelos/vue-izitoast)
+[![devDependencies Status](https://david-dm.org/arthurvasconcelos/vue-izitoast/dev-status.svg?style=flat-square)](https://david-dm.org/arthurvasconcelos/vue-izitoast?type=dev)
 [![peerDependencies Status](https://david-dm.org/arthurvasconcelos/vue-izitoast/peer-status.svg?style=flat-square)](https://david-dm.org/arthurvasconcelos/vue-izitoast?type=peer)
 
 [![Latest GH Latest Release](https://img.shields.io/github/release/arthurvasconcelos/vue-izitoast.svg?style=flat-square)](https://github.com/arthurvasconcelos/vue-izitoast/releases/latest)
-[![Total GH Latest Release Downloads](https://img.shields.io/github/downloads/arthurvasconcelos/vue-izitoast/latest/total.svg?style=flat-square)](https://github.com/arthurvasconcelos/vue-izitoast/releases/latest)
 [![Commits since latest GH release](https://img.shields.io/github/commits-since/arthurvasconcelos/vue-izitoast/latest.svg?style=flat-square)](https://github.com/arthurvasconcelos/vue-izitoast/commits/master)
 [![GH Forks](https://img.shields.io/github/forks/arthurvasconcelos/vue-izitoast.svg?style=flat-square)](https://github.com/arthurvasconcelos/vue-izitoast/network)
 [![GH Starts](https://img.shields.io/github/stars/arthurvasconcelos/vue-izitoast.svg?style=flat-square)](https://github.com/arthurvasconcelos/vue-izitoast/stargazers)
@@ -16,9 +22,21 @@ Elegant, responsive, flexible and lightweight notification plugin implemented fo
 [![NPM Latest Package Release](https://img.shields.io/npm/v/vue-izitoast.svg?style=flat-square)](https://www.npmjs.com/package/vue-izitoast)
 [![NPM Package Downloads](https://img.shields.io/npm/dt/vue-izitoast.svg?style=flat-square)](https://www.npmjs.com/package/vue-izitoast)
 [![License](https://img.shields.io/github/license/arthurvasconcelos/vue-izitoast.svg?style=flat-square)](https://github.com/arthurvasconcelos/vue-izitoast/blob/master/LICENSE)
-[![Compatible Node Version](https://img.shields.io/node/v/vue-izitoast.svg?style=flat-square)](https://github.com/arthurvasconcelos/vue-izitoast/blob/master/package.json#L36)
 
 ![cover](http://i.imgur.com/NKk7Rxm.png)
+
+## Table of Contents
+
+- [Vue iziToast](#vue-izitoast)
+  - [Table of Contents](#table-of-contents)
+  - [Requirements](#requirements)
+  - [Install](#install)
+  - [Configuration](#configuration)
+  - [Usage](#usage)
+  - [Testing](#testing)
+  - [License](#license)
+  - [Contributing](#contributing)
+  - [Contributors](#contributors)
 
 ## Requirements
 
@@ -26,6 +44,7 @@ Elegant, responsive, flexible and lightweight notification plugin implemented fo
 - **iziToast:** _lastest_
 
 ## Install
+
 ```sh
 $ npm install vue-izitoast --save
 
@@ -47,98 +66,34 @@ or
 Vue.use(VueIziToast, defaultOptionsObject);
 ```
 
-## Usage [![Edit Vue-Izitoast Example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/8l1y3mn8rl)
+## Usage
 
-```javascript
-new Vue({
-    el: '#app',
-    data() {
-        return {
-            notificationSystem: {
-                options: {
-                    show: {
-                        theme: 'dark',
-                        icon: 'icon-person',
-                        position: 'topCenter',
-                        progressBarColor: 'rgb(0, 255, 184)',
-                        buttons: [
-                            ['<button>Ok</button>', function (instance, toast) {
-                                alert("Hello world!");
-                            }, true],
-                            ['<button>Close</button>', function (instance, toast) {
-                                instance.hide({
-                                    transitionOut: 'fadeOutUp',
-                                    onClosing: function(instance, toast, closedBy){
-                                        console.info('closedBy: ' + closedBy);
-                                    }
-                                }, toast, 'buttonName');
-                            }]
-                        ],
-                        onOpening: function(instance, toast){
-                            console.info('callback abriu!');
-                        },
-                        onClosing: function(instance, toast, closedBy){
-                            console.info('closedBy: ' + closedBy);
-                        }
-                    },
-                    ballon: {
-                        balloon: true,
-                        position: 'bottomCenter'
-                    },
-                    info: {
-                        position: 'bottomLeft'
-                    },
-                    success: {
-                        position: 'bottomRight'
-                    },
-                    warning: {
-                        position: 'topLeft'
-                    },
-                    error: {
-                        position: 'topRight'
-                    },
-                    question: {
-                        timeout: 20000,
-                        close: false,
-                        overlay: true,
-                        toastOnce: true,
-                        id: 'question',
-                        zindex: 999,
-                        position: 'center',
-                        buttons: [
-                            ['<button><b>YES</b></button>', function (instance, toast) {
-                                instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
-                            }, true],
-                            ['<button>NO</button>', function (instance, toast) {
-                                instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
-                            }]
-                        ],
-                        onClosing: function(instance, toast, closedBy){
-                            console.info('Closing | closedBy: ' + closedBy);
-                        },
-                        onClosed: function(instance, toast, closedBy){
-                            console.info('Closed | closedBy: ' + closedBy);
-                        }
-                    }
-                }
-            }
-        };
-    },
-    mounted: function() {
-        this.$toast.show('Welcome!', 'Hey', notificationSystem.options.show);
-        this.$toast.show('Welcome!', 'Hey', notificationSystem.options.ballon);
-        this.$toast.info('Welcome!', 'Hello', notificationSystem.options.info);
-        this.$toast.success('Successfully inserted record!', 'OK', notificationSystem.options.success);
-        this.$toast.warning('You forgot important data', 'Caution', notificationSystem.options.warning);
-        this.$toast.error('Illegal operation', 'Error', notificationSystem.options.error);
-        this.$toast.question('Are you sure about that?', 'Hey', notificationSystem.options.question);
-    }
-})
-```
+See examples in our [<img src="resources/storybook-logo.png" alt="Storybook" width="30">](https://arthurvasconcelos.com.br/vue-izitoast)
+
+or Try on [![Edit Vue-Izitoast Example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/8l1y3mn8rl)
+
+## Testing
+
+Vue Izitoast is using Travis as CD/CI. You can check the state of our last build here [![Build Status](https://travis-ci.org/arthurvasconcelos/vue-izitoast.svg?branch=master&style=flat-square)](https://travis-ci.org/arthurvasconcelos/vue-izitoast).
+
+We now are also pledging with [<img src="resources/Browserstack-logo@2x.png" alt="BroserStack" width="100">](https://www.browserstack.com) so we can test on multiple browser and garantee that you will have a great usage cross-browser and os.
+
+## License
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Farthurvasconcelos%2Fvue-izitoast.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Farthurvasconcelos%2Fvue-izitoast?ref=badge_large)
 
 ## Contributing
+
 - Vue-Izitoast Issues: https://github.com/arthurvasconcelos/vue-izitoast/issues
 - IziToast Issues: https://github.com/dolce/iziToast/issues
+
+## Contributors
+
+<!-- Contributors start -->
+[<img alt="arthurvasconcelos" src="https://avatars3.githubusercontent.com/u/1286768?v=4&s=117" width="117">](https://github.com/arthurvasconcelos) |[<img alt="greenkeeper[bot]" src="https://avatars3.githubusercontent.com/in/505?v=4&s=117" width="117">](https://github.com/apps/greenkeeper) |[<img alt="lgguzman" src="https://avatars3.githubusercontent.com/u/7071825?v=4&s=117" width="117">](https://github.com/lgguzman) |[<img alt="fossabot" src="https://avatars0.githubusercontent.com/u/29791463?v=4&s=117" width="117">](https://github.com/fossabot) |[<img alt="webmcheck" src="https://avatars2.githubusercontent.com/u/1275723?v=4&s=117" width="117">](https://github.com/webmcheck) |
+:---: |:---: |:---: |:---: |:---: |
+[arthurvasconcelos](https://github.com/arthurvasconcelos) |[greenkeeper[bot]](https://github.com/apps/greenkeeper) |[lgguzman](https://github.com/lgguzman) |[fossabot](https://github.com/fossabot) |[webmcheck](https://github.com/webmcheck) |
+<!-- Contributors end -->
 
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 

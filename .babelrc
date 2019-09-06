@@ -1,25 +1,5 @@
 {
-    "comments": false,
-    "env": {
-      "main": {
-        "presets": [
-          [
-            "env",
-            {
-              "modules": false,
-              "targets": {
-                "browsers": ["> 1%", "last 2 versions", "not ie <= 8"],
-                "node": 7
-              },
-              "useBuiltIns": true
-            }
-          ],
-          "stage-3"
-        ],
-        "plugins": [
-          "transform-runtime"
-        ]
-      }
-    }
-  }
-  
+  "presets": ["@babel/preset-env"],
+  "plugins": ["@babel/plugin-transform-runtime", "@babel/plugin-proposal-class-properties"],
+  "comments": false
+}

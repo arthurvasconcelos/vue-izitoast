@@ -1,5 +1,23 @@
 # Vue-izitoast Changelog
 
+## v1.2.1 (August 29, 2019)
+
+- [#23](https://github.com/arthurvasconcelos/vue-izitoast/issues/23) [BUGFIX] Fixed undefined toast in Vue prototype.
+- [#6](https://github.com/arthurvasconcelos/vue-izitoast/issues/6) [IMPROVEMENT] Improved error message of `_checkParams` to show correct method signature.
+
+### Breaking Changes
+
+- Now Vue-izitoast is accessed through `Vue.toast` or `this.$toast`.
+
+## v1.2.0 (August 23, 2019)
+
+- [#16](https://github.com/arthurvasconcelos/vue-izitoast/issue/16) / [#17](https://github.com/arthurvasconcelos/vue-izitoast/issue/17) / [#20](https://github.com/arthurvasconcelos/vue-izitoast/pull/20) / [#22](https://github.com/arthurvasconcelos/vue-izitoast/pull/20) [BUGFIX] Removed Node Engine from package.json
+- [FEATURE] Implemented Types;
+- [FEATURE] Implemented Tests;
+- [FEATURE] Implemented Github Workflow;
+- [FEATURE] Implemented Storybook and released as [GH Pages](https://arthurvasconcelos.com.br/vue-izitoast);
+- [FEATURE] Improves on building process;
+
 ## v1.1.2 (November 01, 2018)
 
 - Update builded files.
