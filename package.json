@@ -62,7 +62,7 @@
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/plugin-proposal-class-properties": "^7.7.4",
-    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.7.6",
     "@babel/preset-env": "^7.5.5",
     "@cypress/code-coverage": "^1.10.0",
     "@storybook/addon-notes": "^5.1.11",
