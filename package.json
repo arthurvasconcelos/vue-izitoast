@@ -98,7 +98,7 @@
     "rimraf": "^3.0.0",
     "semver": "^6.3.0",
     "shelljs": "^0.8.3",
-    "start-server-and-test": "^1.10.0",
+    "start-server-and-test": "^1.10.11",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "vue": "^2.6.10",
     "vue-html-loader": "^1.2.4",
