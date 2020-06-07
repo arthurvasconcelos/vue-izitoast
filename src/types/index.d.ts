@@ -7,23 +7,23 @@ export class VueIzitoast {
 
     static init(Vue: Vue): void;
 
-    public show(message: string, title: string, options: VueIzitoastOptions): void;
+    public show(message: string, title?: string, options?: VueIzitoastOptions): void;
 
-    public hide(toast: string | HTMLDivElement | null, options: VueIzitoastOptions): void;
+    public hide(toast: string | HTMLDivElement | null, options?: VueIzitoastOptions): void;
 
-    public progress(toast: string | HTMLDivElement | null, options: VueIzitoastOptions, callback: () => void): void;
+    public progress(toast: string | HTMLDivElement | null, options?: VueIzitoastOptions, callback?: () => void): void;
 
     public destroy(): void;
 
-    public info(message: string, title: string, options: VueIzitoastOptions): void;
+    public info(message: string, title?: string, options?: VueIzitoastOptions): void;
 
-    public success(message: string, title: string, options: VueIzitoastOptions): void;
+    public success(message: string, title?: string, options?: VueIzitoastOptions): void;
 
-    public warning(message: string, title: string, options: VueIzitoastOptions): void;
+    public warning(message: string, title?: string, options?: VueIzitoastOptions): void;
 
-    public error(message: string, title: string, options: VueIzitoastOptions): void;
+    public error(message: string, title?: string, options?: VueIzitoastOptions): void;
 
-    public question(message: string, title: string, options: VueIzitoastOptions): void;
+    public question(message: string, title?: string, options?: VueIzitoastOptions): void;
 
     public on<CB>(eventName: string, callback: CB): void;
 
@@ -31,29 +31,61 @@ export class VueIzitoast {
 }
 
 export interface VueIzitoastOptions {
-    zindex: number;
-    layout: number;
-    balloon: boolean;
-    close: boolean;
-    closeOnEscape: boolean;
-    rtl: boolean;
-    position: string;
-    timeout: number;
-    animateInside: boolean;
-    drag: boolean;
-    pauseOnHover: boolean;
-    resetOnHover: boolean;
-    transitionIn: string;
-    transitionOut: string;
-    transitionInMobile: string;
-    transitionOutMobile: string;
-    buttons: unknown;
-    inputs: unknown;
-    onOpening: () => void;
-    onOpened: () => void;
-    onClosing: () => void;
-    onClosed: () => void;
+    animateInside?: boolean;
+    backgroundColor?: string;
+    balloon?: boolean;
+    buttons?: object;
+    class?: string;
+    close?: boolean;
+    closeOnClick?: boolean;
+    closeOnEscape?: boolean;
+    color?: string;
+    displayMode?: string;
+    drag?: boolean;
+    icon?: string;
+    iconColor?: string;
+    iconText?: string;
+    iconUrl?: string;
+    id?: string;
+    image?: string;
+    imageWidth?: number;
+    inputs?: object;
+    layout?: number;
+    maxWidth?: number;
+    message?: string;
+    messageColor?: string;
+    messageLineHeight?: number;
+    messageSize?: string;
+    overlay?: boolean;
+    overlayClose?: boolean;
+    overlayColor?: boolean;
+    pauseOnHover?: boolean;
+    position?: string;
+    progressBar?: boolean;
+    progressBarColor?: string;
+    progressBarEasing?: string;
+    resetOnHover?: boolean;
+    rtl?: boolean;
+    target?: string;
+    targetFirst?: boolean;
+    theme?: string;
+    timeout?: number;
+    titleColor?: string;
+    titleLineHeight?: string;
+    titleSize?: string;
+    transitionIn?: string;
+    transitionInMobile?: string;
+    transitionOut?: string;
+    transitionOutMobile?: string;
+    zindex?: number;
+
+    onOpening?: () => void;
+    onOpened?: () => void;
+    onClosing?: () => void;
+    onClosed?: () => void;
 }
+
+export const install: PluginFunction<{}>;
 
 // https://vuejs.org/v2/guide/typescript.html#Augmenting-Types-for-Use-with-Plugins
 declare module 'vue/types/vue' {
