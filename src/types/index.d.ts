@@ -7,7 +7,7 @@ export default class VueIzitoast {
 
     static init(Vue: Vue): void;
 
-    public show(message: string, title: string, options: VueIzitoastOptions): void;
+    public show(message: string, title?: string, options?: VueIzitoastOptions): void;
 
     public hide(toast: string | HTMLDivElement | null, options: VueIzitoastOptions): void;
 
@@ -31,28 +31,28 @@ export default class VueIzitoast {
 }
 
 export interface VueIzitoastOptions {
-    zindex: number;
-    layout: number;
-    balloon: boolean;
-    close: boolean;
-    closeOnEscape: boolean;
-    rtl: boolean;
-    position: string;
-    timeout: number;
-    animateInside: boolean;
-    drag: boolean;
-    pauseOnHover: boolean;
-    resetOnHover: boolean;
-    transitionIn: string;
-    transitionOut: string;
-    transitionInMobile: string;
-    transitionOutMobile: string;
-    buttons: unknown;
-    inputs: unknown;
-    onOpening: () => void;
-    onOpened: () => void;
-    onClosing: () => void;
-    onClosed: () => void;
+    zindex?: number;
+    layout?: number;
+    balloon?: boolean;
+    close?: boolean;
+    closeOnEscape?: boolean;
+    rtl?: boolean;
+    position?: string;
+    timeout?: number;
+    animateInside?: boolean;
+    drag?: boolean;
+    pauseOnHover?: boolean;
+    resetOnHover?: boolean;
+    transitionIn?: string;
+    transitionOut?: string;
+    transitionInMobile?: string;
+    transitionOutMobile?: string;
+    buttons?: unknown;
+    inputs?: unknown;
+    onOpening?: () => void;
+    onOpened?: () => void;
+    onClosing?: () => void;
+    onClosed?: () => void;
 }
 
 // https://vuejs.org/v2/guide/typescript.html#Augmenting-Types-for-Use-with-Plugins
