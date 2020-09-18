@@ -56,6 +56,9 @@ $ yarn add vue-izitoast
 ```javascript
 import Vue from 'vue';
 import VueIziToast from 'vue-izitoast';
+or 
+// Typescript
+import {VueIzitoast} from "vue-izitoast";
 
 import 'izitoast/dist/css/iziToast.css';
 or
