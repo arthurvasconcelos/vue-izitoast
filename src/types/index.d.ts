@@ -7,27 +7,27 @@ export default class VueIzitoast {
 
     static init(Vue: Vue): void;
 
-    public show(message: string, title?: string, options?: VueIzitoastOptions): void;
+     public show(message: string, title?: string, options?: VueIzitoastOptions): void;
 
-    public hide(toast: string | HTMLDivElement | null, options: VueIzitoastOptions): void;
+    public hide(toast?: string | HTMLDivElement, options?: VueIzitoastOptions): void;
 
-    public progress(toast: string | HTMLDivElement | null, options: VueIzitoastOptions, callback: () => void): void;
+    public progress(toast: string | HTMLDivElement | null, options?: VueIzitoastOptions, callback?: () => void): void;
 
     public destroy(): void;
 
-    public info(message: string, title: string, options: VueIzitoastOptions): void;
+    public info(message: string, title?: string, options?: VueIzitoastOptions): void;
 
-    public success(message: string, title: string, options: VueIzitoastOptions): void;
+    public success(message: string, title?: string, options?: VueIzitoastOptions): void;
 
-    public warning(message: string, title: string, options: VueIzitoastOptions): void;
+    public warning(message: string, title?: string, options?: VueIzitoastOptions): void;
 
-    public error(message: string, title: string, options: VueIzitoastOptions): void;
+    public error(message: string, title?: string, options?: VueIzitoastOptions): void;
 
-    public question(message: string, title: string, options: VueIzitoastOptions): void;
+    public question(message: string, title?: string, options?: VueIzitoastOptions): void;
 
     public on<CB>(eventName: string, callback: CB): void;
 
-    public off<CB>(eventName: string, callback: CB): void;
+    public off<CB>(eventName: string, callback?: CB): void;
 }
 
 export interface VueIzitoastOptions {
