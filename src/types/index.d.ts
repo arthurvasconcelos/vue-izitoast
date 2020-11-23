@@ -1,6 +1,6 @@
 import Vue, { PluginFunction } from 'vue';
 
-export class VueIzitoast {
+export default class VueIzitoast {
     constructor(options?: VueIzitoastOptions);
 
     static install(): PluginFunction<any>;
